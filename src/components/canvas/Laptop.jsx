@@ -70,7 +70,7 @@ const Laptop = ({ ...props }) => {
       <directionalLight ref={keyLight} castShadow intensity={6}>
         <orthographicCamera
           attachObject={["shadow", "camera"]}
-          args={[10, 10, 10, -10, 0.5, 30]}
+          args={[-10, 10, 10, -10, 0.5, 30]}
         />
       </directionalLight>
       <group ref={group} position={[0, -height / 2.65, 0]} {...props}>
