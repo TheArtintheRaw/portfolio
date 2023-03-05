@@ -43,8 +43,10 @@ const Hero = () => {
           />
         </div>
         {/* </a> */}
+        <div>
+          <p className={`${styles.sectionSubText}`}>scroll</p>
+        </div>
       </div>
-      <p className={`${styles.sectionSubText}`}>scroll</p>
     </section>
   );
 };
