@@ -41,10 +41,10 @@ const Hero = () => {
             }}
             className='w-3 h-3 rounded-full bg-secondary mb-1'
           />
-          <p className={`${styles.sectionSubText}`}>scroll</p>
         </div>
         {/* </a> */}
       </div>
+      <p className={`${styles.sectionSubText}`}>scroll</p>
     </section>
   );
 };
