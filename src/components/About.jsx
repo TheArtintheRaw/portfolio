@@ -47,13 +47,13 @@ const About = () => {
         variants={fadeIn("", "", 0.1, 1)}
         className='mt-4 text-secondary text-[17px] max-w-3xl leading-[30px]'
       >
-        I'm a creative software developer with prior experience in digital art
-        and graphic design. Educated in TypeScript and JavaScript and expertise
-        in frameworks like React, Node.js, and Next.js. Experienced with
-        Three.js, React-3-Fiber, and programs like Blender to produce digital
-        visuals. Able to effectively collaborate with clients to design their
-        visions with accessible, optimized, and scalable industry standard
-        solutions. Creating the future one page at a time.
+        I'm a Software Developer with experience in digital art producing
+        graphic designs. Educated in TypeScript and JavaScript and expertise in
+        frameworks like React, Node.js, and Next.js. Experienced with Three.js,
+        React-3-Fiber, and programs like Blender to produce digital visuals.
+        Able to effectively collaborate with clients to design their visions
+        with accessible, optimized, and scalable industry standard solutions.
+        Creating the future one page at a time.
       </motion.p>
 
       <div className='mt-20 flex flex-wrap gap-10'>
