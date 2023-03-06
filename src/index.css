@@ -14,6 +14,12 @@
   color-scheme: dark;
 }
 
+body {
+  width: 100%;
+  overflow-x: hidden;
+  overflow-y: auto;
+}
+
 .hash-span {
   margin-top: -100px;
   padding-bottom: 100px;
@@ -122,8 +128,6 @@
   height: 1em;
   border-radius: 50%;
   position: relative;
-
-  overflow: hidden;
   animation: mulShdSpin 1.1s infinite ease;
   transform: translateZ(0);
 }
@@ -139,8 +143,6 @@
   align-items: end;
   line-height: 1em;
   gap: 1em;
-  overflow: auto;
-
   pointer-events: none;
   height: 12.5vw;
 }
@@ -215,6 +217,10 @@ h1 {
   font-weight: 300;
   font-size: 1vw;
   line-height: 1.25em;
+}
+
+#laptop {
+  overflow: hidden;
 }
 
 @keyframes mulShdSpin {

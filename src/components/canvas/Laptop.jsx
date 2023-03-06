@@ -4,15 +4,15 @@ import { Canvas, useFrame, useThree } from "@react-three/fiber";
 import {
   Html,
   useGLTF,
-  softShadows,
+  SoftShadows,
   ScrollControls,
   useScroll,
   useTexture,
 } from "@react-three/drei";
 import useRefs from "react-use-refs";
-import { useState, useEffect } from "react";
+import { useState, useEffect, Suspense } from "react";
+import CanvasLoader from "../Loader";
 
-softShadows();
 const rsqw = (t, delta = 0.1, a = 1, f = 1 / (2 * Math.PI)) =>
   (a / Math.atan(1 / delta)) * Math.atan(Math.sin(2 * Math.PI * t * f) / delta);
 
@@ -28,7 +28,7 @@ const Laptop = ({ ...props }) => {
   useFrame((state, delta) => {
     const r1 = scroll.range(0 / 4, 1 / 4);
     const r2 = scroll.range(1 / 4, 1 / 4);
-    const r3 = scroll.visible(3 / 5, 1 / 5);
+    const r3 = scroll.visible(3 / 4, 1 / 4);
     mbp16.current.rotation.x = Math.PI - (Math.PI / 2) * rsqw(r1) + r2 * 0.33;
     mbp14.current.rotation.x = Math.PI - (Math.PI / 2) * rsqw(r1) - r2 * 0.39;
     group.current.rotation.y = THREE.MathUtils.damp(
@@ -92,7 +92,7 @@ const Laptop = ({ ...props }) => {
         <M1 ref={mbp16} texture={textureRed} scale={width / 100}>
           <Tag
             ref={left}
-            position={[3, 7, 0]}
+            position={[6, 15, 0]}
             head='TypeScript'
             stat='React'
             expl={`front\nend\ndevelopment`}
@@ -107,7 +107,7 @@ const Laptop = ({ ...props }) => {
         >
           <Tag
             ref={right}
-            position={[5, 2, 0]}
+            position={[10, 5, 0]}
             head='FullStack'
             stat='MERN'
             expl={`application\ndevelopment`}
@@ -171,34 +171,14 @@ const Tag = forwardRef(({ head, stat, expl, ...props }, ref) => {
 });
 
 const LaptopCanvas = () => {
-  const [isMobile, setIsMobile] = useState(false);
-
-  useEffect(() => {
-    // Add a listener for changes to the screen size
-    const mediaQuery = window.matchMedia("(max-width: 500px)");
-
-    // Set the initial value of the `isMobile` state variable
-    setIsMobile(mediaQuery.matches);
-
-    // Define a callback function to handle changes to the media query
-    const handleMediaQueryChange = (event) => {
-      setIsMobile(event.matches);
-    };
-
-    // Add the callback function as a listener for changes to the media query
-    mediaQuery.addEventListener("change", handleMediaQueryChange);
-
-    // Remove the listener when the component is unmounted
-    return () => {
-      mediaQuery.removeEventListener("change", handleMediaQueryChange);
-    };
-  }, []);
-
   return (
     <Canvas shadows dpr={[1, 2]} camera={{ position: [0, -3.2, 40], fov: 12 }}>
-      <ScrollControls pages={5}>
-        <Laptop isMobile={isMobile} />
-      </ScrollControls>
+      <Suspense fallback={<CanvasLoader />}>
+        <SoftShadows />
+        <ScrollControls pages={5}>
+          <Laptop />
+        </ScrollControls>
+      </Suspense>
     </Canvas>
   );
 };
