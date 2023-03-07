@@ -23,8 +23,8 @@ const Laptop = ({ ...props }) => {
   const [group, mbp16, mbp14, keyLight, stripLight, fillLight, left, right] =
     useRefs();
   const [textureRed, textureBlue] = useTexture([
-    "compscreen1.png",
-    "compscreen2.png",
+    "https://res.cloudinary.com/dfmaimvfi/image/upload/v1678196277/compscreen1_vvjsyz.png",
+    "https://res.cloudinary.com/dfmaimvfi/image/upload/v1678196277/compscreen2_fwxyh3.png",
   ]);
   useFrame((state, delta) => {
     const r1 = scroll.range(0 / 4, 1 / 4);
@@ -60,10 +60,10 @@ const Laptop = ({ ...props }) => {
       3 + 2 * (1 - r1)
     );
     if (left.current) {
-      left.current.classList.toggle("show", r3);
+      left.current.classList.toggle("show", r2);
     }
     if (right.current) {
-      right.current.classList.toggle("show", r3);
+      right.current.classList.toggle("show", r2);
     }
   });
   return (
@@ -109,7 +109,7 @@ const Laptop = ({ ...props }) => {
         >
           <Tag
             ref={right}
-            position={[15, -51, 0, 0]}
+            position={[14, -51, 0, 0]}
             maxspeed={0.1}
             head='software'
             stat='DEVELOPER'
@@ -163,6 +163,8 @@ const M1 = forwardRef(({ texture, children, ...props }, ref) => {
   );
 });
 
+useGLTF.preload("mbp-v1-pipe.glb");
+
 const Tag = forwardRef(({ head, stat, expl, ...props }, ref) => {
   return (
     <Html ref={ref} className='data' center {...props}>
@@ -199,12 +201,12 @@ const LaptopCanvas = () => {
 
   return (
     <Canvas
-      shadows
       dpr={[1, 2]}
-      camera={{ position: [0, -3.2, 40], fov: 12 }}
       frameloop='demand'
+      shadows
+      camera={{ position: [0, -3.2, 40], fov: 12 }}
       gl={{ preserveDrawingBuffer: true }}
-      className='min-h-[100%] max-h-[100%] min-w-[102%] max-w-[102%]'
+      className='min-h-[98%] max-h-[98%] min-w-[102%] max-w-[102%]'
     >
       <Suspense fallback={<CanvasLoader />}>
         <SoftShadows />
@@ -212,7 +214,6 @@ const LaptopCanvas = () => {
           <Laptop isMobile={isMobile} />
         </ScrollControls>
       </Suspense>
-      <Preload all />
     </Canvas>
   );
 };

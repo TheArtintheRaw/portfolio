@@ -32,6 +32,7 @@ import glc from "./company/glc.png";
 import carrent from "./carrent.png";
 import jobit from "./jobit.png";
 import tripguide from "./tripguide.png";
+import realdb from "./realdb.png";
 
 export {
   // logo,
@@ -65,4 +66,5 @@ export {
   mfm,
   glc,
   logo1,
+  realdb,
 };

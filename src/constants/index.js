@@ -25,6 +25,7 @@ import {
   mfm,
   glc,
   threejs,
+  realdb,
 } from "../assets";
 
 export const navLinks = [
@@ -200,9 +201,9 @@ const testimonials = [
 
 const projects = [
   {
-    name: "Car Rent",
+    name: "MERN Dashboard",
     description:
-      "Web-based platform that allows users to search, book, and manage car rentals from various providers, providing a convenient and efficient solution for transportation needs.",
+      "Web-based CRUD Dashboard Application for Real Estate using the MERN stack, featuring login and out, creation and deletion of properties, agents directory and more.",
     tags: [
       {
         name: "react",
@@ -217,8 +218,8 @@ const projects = [
         color: "pink-text-gradient",
       },
     ],
-    image: carrent,
-    source_code_link: "https://github.com/",
+    image: realdb,
+    source_code_link: "https://github.com/TheArtintheRaw/dashboard_mern_study",
   },
   {
     name: "Job IT",
