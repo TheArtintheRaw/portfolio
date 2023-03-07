@@ -203,6 +203,7 @@ const LaptopCanvas = () => {
       dpr={[1, 2]}
       camera={{ position: [0, -3.2, 40], fov: 12 }}
       frameloop='demand'
+      gl={{ preserveDrawingBuffer: true }}
       className='min-h-[100%] max-h-[100%] min-w-[102%] max-w-[102%]'
     >
       <Suspense fallback={<CanvasLoader />}>
