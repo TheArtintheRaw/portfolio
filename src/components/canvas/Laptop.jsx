@@ -8,6 +8,7 @@ import {
   ScrollControls,
   useScroll,
   useTexture,
+  Preload,
 } from "@react-three/drei";
 import useRefs from "react-use-refs";
 import { useState, useEffect, Suspense } from "react";
@@ -29,6 +30,7 @@ const Laptop = ({ ...props }) => {
     const r1 = scroll.range(0 / 4, 1 / 4);
     const r2 = scroll.range(1 / 4, 1 / 4);
     const r3 = scroll.visible(3 / 4, 1 / 4);
+    const r4 = scroll.curve(1 / 4, 1 / 4);
     mbp16.current.rotation.x = Math.PI - (Math.PI / 2) * rsqw(r1) + r2 * 0.33;
     mbp14.current.rotation.x = Math.PI - (Math.PI / 2) * rsqw(r1) - r2 * 0.39;
     group.current.rotation.y = THREE.MathUtils.damp(
@@ -92,10 +94,10 @@ const Laptop = ({ ...props }) => {
         <M1 ref={mbp16} texture={textureRed} scale={width / 100}>
           <Tag
             ref={left}
-            position={[6, 15, 0]}
-            head='TypeScript'
-            stat='React'
-            expl={`front\nend\ndevelopment`}
+            position={[30, -85, 0, 0]}
+            head='building the'
+            stat={`FUTURE`}
+            expl={`starts\ntoday`}
           />
         </M1>
         <M1
@@ -107,10 +109,11 @@ const Laptop = ({ ...props }) => {
         >
           <Tag
             ref={right}
-            position={[10, 5, 0]}
-            head='FullStack'
-            stat='MERN'
-            expl={`application\ndevelopment`}
+            position={[15, -55, 0, 0]}
+            maxspeed={0.1}
+            head='software'
+            stat='DEVELOPER'
+            expl={`creating\nexperiences`}
           />
         </M1>
       </group>
@@ -171,14 +174,43 @@ const Tag = forwardRef(({ head, stat, expl, ...props }, ref) => {
 });
 
 const LaptopCanvas = () => {
+  const [isMobile, setIsMobile] = useState(false);
+
+  useEffect(() => {
+    // Add a listener for changes to the screen size
+    const mediaQuery = window.matchMedia("(max-width: 500px)");
+
+    // Set the initial value of the `isMobile` state variable
+    setIsMobile(mediaQuery.matches);
+
+    // Define a callback function to handle changes to the media query
+    const handleMediaQueryChange = (event) => {
+      setIsMobile(event.matches);
+    };
+
+    // Add the callback function as a listener for changes to the media query
+    mediaQuery.addEventListener("change", handleMediaQueryChange);
+
+    // Remove the listener when the component is unmounted
+    return () => {
+      mediaQuery.removeEventListener("change", handleMediaQueryChange);
+    };
+  }, []);
+
   return (
-    <Canvas shadows dpr={[1, 2]} camera={{ position: [0, -3.2, 40], fov: 12 }}>
+    <Canvas
+      shadows
+      dpr={[1, 2]}
+      camera={{ position: [0, -3.2, 40], fov: 12 }}
+      gl={{ preserveDrawingBuffer: true }}
+    >
       <Suspense fallback={<CanvasLoader />}>
         <SoftShadows />
-        <ScrollControls pages={5}>
-          <Laptop />
+        <ScrollControls pages={2}>
+          <Laptop isMobile={isMobile} />
         </ScrollControls>
       </Suspense>
+      <Preload all />
     </Canvas>
   );
 };
