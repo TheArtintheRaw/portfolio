@@ -139,8 +139,8 @@ const experiences = [
     points: [
       "Developing and maintaining web applications using React.js and Next.js.",
       "Collaborating to produce NFTs from assets via generative art.",
-      "Developing and producing front end minting experience for the to obtain the assets.",
-      "Participating in the community, answering questions publicly about processes and and projections, providing transparency.",
+      "Developing and producing front end minting experienceS for the obtaining assets.",
+      "Participating in the community, answering questions publicly about processes and projections, providing transparency.",
     ],
   },
   {
@@ -153,7 +153,7 @@ const experiences = [
       "Developing and maintaining web applications using React.js and other related technologies.",
       "Collaborating with clients to develop software solutions and updating and maintaining ecommerce sites and products.",
       "Implementing responsive design and ensuring cross-browser compatibility.",
-      "Continuing to educate myself, aquiring knowledge and skills in order to produce to the best of my abilities.",
+      "Continuing to educate myself, acquiring knowledge and skills in order to produce to the best of my abilities.",
     ],
   },
   {

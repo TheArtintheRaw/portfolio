@@ -48,12 +48,12 @@ const About = () => {
         className='mt-4 text-secondary text-[17px] max-w-3xl leading-[30px]'
       >
         I'm a Software Developer with experience in digital art producing
-        graphic designs. Educated in TypeScript and JavaScript and expertise in
-        frameworks like React, Node.js, and Next.js. Experienced with Three.js,
-        React-3-Fiber, and programs like Blender to produce digital visuals.
-        Able to effectively collaborate with clients to design their visions
-        with accessible, optimized, and scalable industry standard solutions.
-        Creating the future one page at a time.
+        graphic designs. Educated in TypeScript and JavaScript and have
+        expertise in frameworks like React, Node.js, and Next.js. Experienced
+        with Three.js, React-3-Fiber, and programs like Blender to produce
+        digital visuals. Able to effectively collaborate with clients to design
+        their visions with accessible, optimized, and scalable industry-standard
+        solutions. Creating the future one page at a time.
       </motion.p>
 
       <div className='mt-20 flex flex-wrap gap-10'>
