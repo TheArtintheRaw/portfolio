@@ -25,7 +25,7 @@ const Hero = () => {
         </div>
       </div>
 
-      <LaptopCanvas id='laptop' />
+      <LaptopCanvas />
     </section>
   );
 };

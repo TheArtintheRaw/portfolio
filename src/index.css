@@ -219,8 +219,8 @@ h1 {
   line-height: 1.25em;
 }
 
-#laptop {
-  overflow: hidden;
+.laptop-canvas {
+  scrollbar-width: none;
 }
 
 @keyframes mulShdSpin {

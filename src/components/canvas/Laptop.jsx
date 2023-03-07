@@ -109,7 +109,7 @@ const Laptop = ({ ...props }) => {
         >
           <Tag
             ref={right}
-            position={[15, -55, 0, 0]}
+            position={[15, -51, 0, 0]}
             maxspeed={0.1}
             head='software'
             stat='DEVELOPER'
@@ -202,11 +202,12 @@ const LaptopCanvas = () => {
       shadows
       dpr={[1, 2]}
       camera={{ position: [0, -3.2, 40], fov: 12 }}
-      gl={{ preserveDrawingBuffer: true }}
+      frameloop='demand'
+      className='min-h-[100%] max-h-[100%] min-w-[102%] max-w-[102%]'
     >
       <Suspense fallback={<CanvasLoader />}>
         <SoftShadows />
-        <ScrollControls pages={2}>
+        <ScrollControls pages={1}>
           <Laptop isMobile={isMobile} />
         </ScrollControls>
       </Suspense>
