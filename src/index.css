@@ -267,6 +267,28 @@ html,
   overflow: auto;
 }
 
+.parallax {
+  position: relative;
+  overflow: hidden;
+  height: 500px;
+  perspective: 1px;
+  background-image: url("https://images.unsplash.com/photo-1502082553048-f009c37129b9");
+  background-attachment: fixed;
+  background-size: cover;
+}
+
+.bar {
+  position: absolute;
+  width: 100%;
+  height: calc(100% / var(--n));
+  transform-origin: left bottom;
+  transform-style: preserve-3d;
+}
+
+.bar:nth-child(n) {
+  transform: skewY(-45deg) translateZ(calc((var(--n) - n) * -1px));
+}
+
 .scroll {
   position: absolute;
   top: 0;

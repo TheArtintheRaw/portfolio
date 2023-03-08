@@ -101,7 +101,7 @@ export default function LaptopCanvas() {
       style={{ background: props.open.to([0, 1], ["#001b3f", "#bf2051"]) }}
     >
       <web.h1
-        className='sm:pt-[55%] lg:pt-[55%] text-sm text-[#f3f3f3] text-center'
+        className='sm:pt-[55%] lg:pt-[22%] text-sm text-[#f3f3f3] text-center'
         style={{
           opacity: props.open.to([0, 1], [1, 0]),
           transform: props.open.to(

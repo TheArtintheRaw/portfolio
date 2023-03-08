@@ -10,6 +10,7 @@ import {
   Navbar,
   Tech,
   Works,
+  Bands,
 } from "./components";
 
 const App = () => {
@@ -28,6 +29,7 @@ const App = () => {
         <div className='relative z-0'>
           <Contact />
         </div>
+        <Bands />
       </div>
     </BrowserRouter>
   );
