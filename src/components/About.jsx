@@ -11,7 +11,7 @@ const ServiceCard = ({ index, title, icon }) => (
   <Tilt className='xs:w-[250px] w-full'>
     <motion.div
       variants={fadeIn("right", "spring", index * 0.5, 0.75)}
-      className='w-full green-pink-gradient p-[1px] rounded-[20px] shadow-card'
+      className='w-full glass-card p-[1px] rounded-[20px] shadow-card'
     >
       <div
         options={{
@@ -19,7 +19,7 @@ const ServiceCard = ({ index, title, icon }) => (
           scale: 1,
           speed: 450,
         }}
-        className='bg-tertiary rounded-[20px] py-5 px-12 min-h-[280px] flex justify-evenly items-center flex-col'
+        className='rounded-[20px] py-5 px-12 min-h-[280px] flex justify-evenly items-center flex-col'
       >
         <img
           src={icon}
@@ -40,7 +40,7 @@ const About = () => {
     <>
       <motion.div variants={textVariant()}>
         <p className={styles.sectionSubText}>Introduction</p>
-        <h2 className={styles.sectionHeadText}>About Me.</h2>
+        <h2 className={styles.sectionHeadText}>About Me</h2>
       </motion.div>
 
       <motion.p
@@ -51,12 +51,12 @@ const About = () => {
         graphic designs. Educated in TypeScript and JavaScript and have
         expertise in frameworks like React, Node.js, and Next.js. Experienced
         with Three.js, React-3-Fiber, and programs like Blender to produce
-        digital visuals. Able to effectively collaborate with clients to design
+        digital assets. Able to effectively collaborate with clients to design
         their visions with accessible, optimized, and scalable industry-standard
         solutions. Creating the future one page at a time.
       </motion.p>
 
-      <div className='mt-20 flex flex-wrap gap-10'>
+      <div className='mt-20 flex flex-wrap gap-10 '>
         {services.map((service, index) => (
           <ServiceCard key={service.title} index={index} {...service} />
         ))}

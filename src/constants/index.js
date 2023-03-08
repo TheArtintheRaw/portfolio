@@ -17,29 +17,31 @@ import {
   docker,
   meta,
   starbucks,
-  tesla,
+
   shopify,
-  carrent,
-  jobit,
-  tripguide,
+  
+ 
+  Placeholder,
+ 
   mfm,
   glc,
   threejs,
   realdb,
+  chatgpt,
 } from "../assets";
 
 export const navLinks = [
   {
     id: "about",
-    title: "About",
+    title: "ABOUT",
   },
   {
     id: "work",
-    title: "Work",
+    title: "WORK",
   },
   {
     id: "contact",
-    title: "Contact",
+    title: "CONTACT",
   },
 ];
 
@@ -222,9 +224,9 @@ const projects = [
     source_code_link: "https://github.com/TheArtintheRaw/dashboard_mern_study",
   },
   {
-    name: "Job IT",
+    name: "Web3 Metaverse Site",
     description:
-      "Web application that enables users to search for job openings, view estimated salary ranges for positions, and locate available jobs based on their current location.",
+      "Web3 metaverse application, utilizing xyz.",
     tags: [
       {
         name: "react",
@@ -239,13 +241,13 @@ const projects = [
         color: "pink-text-gradient",
       },
     ],
-    image: jobit,
+    image: Placeholder,
     source_code_link: "https://github.com/",
   },
   {
-    name: "Trip Guide",
+    name: "ChatGPT Clone",
     description:
-      "A comprehensive travel booking platform that allows users to book flights, hotels, and rental cars, and offers curated recommendations for popular destinations.",
+      "A study on ChatGPT and how to use OpenAI API to power an application - uses firebase and google oauth2 logins.",
     tags: [
       {
         name: "nextjs",
@@ -260,8 +262,8 @@ const projects = [
         color: "pink-text-gradient",
       },
     ],
-    image: tripguide,
-    source_code_link: "https://github.com/",
+    image: chatgpt,
+    source_code_link: "https://github.com/TheArtintheRaw/gptclone/",
   },
 ];
 

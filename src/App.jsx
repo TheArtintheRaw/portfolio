@@ -1,4 +1,5 @@
 import { BrowserRouter } from "react-router-dom";
+import { useState } from "react";
 
 import {
   About,
@@ -9,15 +10,13 @@ import {
   Navbar,
   Tech,
   Works,
-  StarsCanvas,
-  LaptopCanvas,
 } from "./components";
 
 const App = () => {
   return (
     <BrowserRouter>
-      <div className='relative z-0 bg-primary'>
-        <div className='bg-hero-pattern bg-cover bg-no-repeat bg-center'>
+      <div className='z-0 bg-primary'>
+        <div className='bg-hero-pattern bg-scroll bg-cover bg-repeat-y bg-center'>
           <Navbar />
           <Hero />
         </div>
@@ -28,7 +27,6 @@ const App = () => {
         <Feedbacks />
         <div className='relative z-0'>
           <Contact />
-          <StarsCanvas className='z-5' />
         </div>
       </div>
     </BrowserRouter>

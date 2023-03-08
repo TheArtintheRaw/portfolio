@@ -1,7 +1,7 @@
-import EarthCanvas from "./Earth";
+
 import BallCanvas from "./Ball";
 
-import StarsCanvas from "./Stars";
 import LaptopCanvas from "./Laptop";
+import WordearthCanvas from "./Wordearth";
 
-export { EarthCanvas, BallCanvas, StarsCanvas, LaptopCanvas };
+export { BallCanvas, LaptopCanvas, WordearthCanvas};
