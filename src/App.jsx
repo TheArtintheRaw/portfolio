@@ -10,7 +10,7 @@ import {
   Navbar,
   Tech,
   Works,
-  Bands,
+  Socials,
 } from "./components";
 
 const App = () => {
@@ -25,11 +25,11 @@ const App = () => {
         <Experience />
         <Tech />
         <Works />
-        <Feedbacks />
+        {/* <Feedbacks /> */}
         <div className='relative z-0'>
           <Contact />
+          <Socials />
         </div>
-        <Bands />
       </div>
     </BrowserRouter>
   );

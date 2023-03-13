@@ -1,8 +1,9 @@
 import * as THREE from "three";
-import { useRef, useState, useMemo, useEffect } from "react";
+import { useRef, useState, useMemo, useEffect, Suspense } from "react";
 import { Canvas, useFrame } from "@react-three/fiber";
 import { Text, OrbitControls } from "@react-three/drei";
 import randomWord from "random-words";
+import CanvasLoader from "../Loader";
 
 function Word({ children, ...props }) {
   const color = new THREE.Color();
@@ -70,14 +71,16 @@ function Cloud({ count = 4, radius = 20 }) {
 export default function WordearthCanvas() {
   return (
     <Canvas dpr={[1, 2]} camera={{ position: [0, 0, 35], fov: 90 }}>
-      <fog attach='fog' args={["#202025", 0, 80]} />
-      <Cloud count={8} radius={20} />
-      <OrbitControls
-        autoRotate
-        enableZoom={false}
-        maxPolarAngle={Math.PI / 2}
-        minPolarAngle={Math.PI / 2}
-      />
+      <Suspense fallback={<CanvasLoader />}>
+        <fog attach='fog' args={["#202025", 0, 80]} />
+        <Cloud count={8} radius={20} />
+        <OrbitControls
+          autoRotate
+          enableZoom={false}
+          maxPolarAngle={Math.PI / 2}
+          minPolarAngle={Math.PI / 2}
+        />
+      </Suspense>
     </Canvas>
   );
 }

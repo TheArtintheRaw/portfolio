@@ -1,4 +1,9 @@
-import { BallCanvas, LaptopCanvas, WordearthCanvas} from './canvas';
+import {
+  BallCanvas,
+  LaptopCanvas,
+  WordearthCanvas,
+} from "./canvas";
+
 import Hero from "./Hero";
 import Navbar from "./Navbar";
 import About from "./About";
@@ -8,7 +13,8 @@ import Works from "./Works";
 import Feedbacks from "./Feedbacks";
 import Contact from "./Contact";
 import CanvasLoader from "./Loader";
-import Bands from "./Bands";
+import Socials from "./Socials";
+import ErrorBoundary from "./ErrorBoundary";
 
 
 
@@ -22,10 +28,9 @@ export {
   Feedbacks,
   Contact,
   CanvasLoader,
-  Bands,
-  BallCanvas,  
-  
+  BallCanvas,
   LaptopCanvas,
   WordearthCanvas,
- 
+  Socials,
+  ErrorBoundary,
 };

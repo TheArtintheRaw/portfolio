@@ -20,7 +20,7 @@ const Navbar = () => {
       }
     };
 
-    window.addEventListener("scroll", handleScroll);
+    window.addEventListener("scroll", handleScroll, { passive: true });
 
     return () =>
       window.removeEventListener("scroll", handleScroll, { passive: true });
@@ -45,8 +45,8 @@ const Navbar = () => {
         >
           <img src={logo1} alt='logo1' className='w-9 h-9 object-contain' />
           <p className='text-white text-[18px] font-bold cursor-pointer flex '>
-            Roger &nbsp;
-            <span className='sm:block hidden'> | Andrews</span>
+            Portfolio&nbsp;
+            <span className='sm:block hidden'> | &nbsp;RGR THT</span>
           </p>
         </Link>
 
@@ -75,14 +75,14 @@ const Navbar = () => {
           <div
             className={`${
               !toggle ? "hidden" : "flex"
-            } p-6 black-gradient absolute top-20 right-0 mx-4 my-2 min-w-[140px] z-10 rounded-xl`}
+            } p-6 violet-gradient absolute top-20 right-0 mx-4 my-2 min-w-[140px] z-10 rounded-xl`}
           >
-            <ul className='list-none flex justify-end items-start text-[#bf2051] flex-1 flex-col gap-4'>
+            <ul className='list-none flex justify-end items-start text-[#f3f3f3] flex-1 flex-col gap-4'>
               {navLinks.map((nav) => (
                 <li
                   key={nav.id}
-                  className={`font-poppins font-medium cursor-pointer text-[16px] ${
-                    active === nav.title ? "text-white" : "text-[#bf2051]"
+                  className={`font-poppins font-medium cursor-pointer text-[16px] text-[#f3f3f3] ${
+                    active === nav.title ? "text-[#f3f3f3]" : "text-[#bf2051]"
                   }`}
                   onClick={() => {
                     setToggle(!toggle);

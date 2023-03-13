@@ -7,10 +7,10 @@ import { services } from "../constants";
 import { SectionWrapper } from "../hoc";
 import { fadeIn, textVariant } from "../utils/motion";
 
-const ServiceCard = ({ index, title, icon }) => (
+const ServiceCard = ({ i, title, icon }) => (
   <Tilt className='xs:w-[250px] w-full'>
     <motion.div
-      variants={fadeIn("right", "spring", index * 0.5, 0.75)}
+      variants={fadeIn("right", "spring", i * 0.5, 0.75)}
       className='w-full glass-card p-[1px] rounded-[20px] shadow-card'
     >
       <div
@@ -47,13 +47,13 @@ const About = () => {
         variants={fadeIn("", "", 0.1, 1)}
         className='mt-4 text-secondary text-[17px] max-w-3xl leading-[30px]'
       >
-        I'm a Software Developer with experience in digital art producing
-        graphic designs. Educated in TypeScript and JavaScript and have
-        expertise in frameworks like React, Node.js, and Next.js. Experienced
-        with Three.js, React-3-Fiber, and programs like Blender to produce
-        digital assets. Able to effectively collaborate with clients to design
-        their visions with accessible, optimized, and scalable industry-standard
-        solutions. Creating the future one page at a time.
+        I'm a Web Developer with experience in digital art producing graphic
+        designs. Educated in TypeScript and JavaScript and have expertise in
+        frameworks like React, Node.js, and Next.js. Experienced with Three.js,
+        React-Three-Fiber, and programs like Blender to produce digital assets.
+        Able to effectively collaborate with clients to design their visions
+        with accessible, optimized, and scalable industry-standard solutions.
+        Creating the future one page at a time.
       </motion.p>
 
       <div className='mt-20 flex flex-wrap gap-10 '>

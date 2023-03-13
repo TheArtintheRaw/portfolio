@@ -1,11 +1,18 @@
 import * as THREE from "three";
 import React, { Suspense, useEffect, useRef, useState } from "react";
-import { Canvas, useFrame } from "@react-three/fiber";
-import { Environment, useGLTF, ContactShadows } from "@react-three/drei";
+import { Canvas, useFrame, useThree } from "@react-three/fiber";
+import {
+  Environment,
+  useGLTF,
+  ContactShadows,
+  Html,
+  OrbitControls,
+} from "@react-three/drei";
 import { useSpring } from "@react-spring/core";
 import { a as three } from "@react-spring/three";
 import { a as web } from "@react-spring/web";
 import CanvasLoader from "../Loader";
+import { styles } from "../../styles";
 
 function Laptop({ open, hinge, ...props }) {
   const group = useRef();
@@ -13,6 +20,7 @@ function Laptop({ open, hinge, ...props }) {
   const { nodes, materials } = useGLTF("/mac-draco.glb");
   // Take care of cursor state on hover
   const [hovered, setHovered] = useState(false);
+
   useEffect(
     () => void (document.body.style.cursor = hovered ? "pointer" : "auto"),
     [hovered]
@@ -47,7 +55,7 @@ function Laptop({ open, hinge, ...props }) {
     <group
       ref={group}
       {...props}
-      onPointerOver={(e) => (e.stopPropagation(), setHovered(true))}
+      onPointerOver={(e) => e.stopPropagation(setHovered(true))}
       onPointerOut={(e) => setHovered(false)}
       dispose={null}
     >
@@ -87,6 +95,9 @@ function Laptop({ open, hinge, ...props }) {
         geometry={nodes.touchbar.geometry}
         position={[0, -0.03, 1.2]}
       />
+      <Html distanceFactor={10}>
+        <div className='content'>Click me</div>
+      </Html>
     </group>
   );
 }
@@ -98,38 +109,57 @@ export default function LaptopCanvas() {
   const props = useSpring({ open: Number(open) });
   return (
     <web.main
-      style={{ background: props.open.to([0, 1], ["#001b3f", "#bf2051"]) }}
+      style={{
+        background: props.open.to([0, 1], ["#001b3f", "#bf2051"]),
+        zIndex: props.open.to([0, 1], [0, 2]),
+      }}
     >
       <web.h1
-        className='sm:pt-[55%] lg:pt-[22%] text-sm text-[#f3f3f3] text-center'
         style={{
           opacity: props.open.to([0, 1], [1, 0]),
-          transform: props.open.to(
-            (o) => `translate3d(-50%,${o * 50 - 100}px,0)`
-          ),
         }}
+        className={`${styles.heroHeadText} text-white z-1 text-center`}
       >
-        click
+        Hi, I'm <span className='text-[#bf2051]'>Roger</span>
       </web.h1>
 
-      <Canvas dpr={[1, 2]} camera={{ position: [0, 0, -30], fov: 35 }}>
+      <web.h1
+        className={`${styles.heroHeadText} laptop-open text-[#f3f3f3]`}
+        style={{
+          zIndex: 2,
+          opacity: props.open.to([0, 1], [0, 1]),
+          transform: props.open.to((o) => `translate3d( 1/4, 2/5, 0)`),
+        }}
+      >
+        A philomath for web development.
+      </web.h1>
+
+      <Canvas dpr={[1, 2]} camera={{ position: [0, 0, -20], fov: 40 }}>
         <three.pointLight
           position={[10, 10, 10]}
           intensity={1.5}
-          color={props.open.to([0, 1], ["#f3f3f3", "#bf2051"])}
+          color={props.open.to([0, 1], ["#bf2051", "#bf2051"])}
         />
         <Suspense fallback={<CanvasLoader />}>
           <group
             rotation={[0, Math.PI, 0]}
-            onClick={(e) => (e.stopPropagation(), setOpen(!open))}
+            onClick={(e) => e.stopPropagation(setOpen(!open))}
           >
             <Laptop
               open={open}
               hinge={props.open.to([0, 1], [1.575, -0.425])}
             />
           </group>
+
           <Environment preset='city' />
         </Suspense>
+        <OrbitControls
+          enableDamping
+          enablePan={false}
+          enableZoom={false}
+          maxPolarAngle={Math.PI / 2}
+          minPolarAngle={Math.PI / 2}
+        />
         <ContactShadows
           position={[0, -4.5, 0]}
           opacity={0.4}
@@ -138,6 +168,7 @@ export default function LaptopCanvas() {
           far={4.5}
         />
       </Canvas>
+
       <web.img
         src='logo.png'
         className='absolute invisible md:visible flex md:flex-end items-center m-10 justify-center h-[100px] w-[175px] right-0 top-0'

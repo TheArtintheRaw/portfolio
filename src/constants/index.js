@@ -17,12 +17,9 @@ import {
   docker,
   meta,
   starbucks,
-
   shopify,
-  
- 
   Placeholder,
- 
+  ecommerce,
   mfm,
   glc,
   threejs,
@@ -122,15 +119,28 @@ const technologies = [
 const experiences = [
   {
     title: "Web Developer",
+    company_name: "freelance",
+    icon: shopify,
+    iconBg: "#383E56",
+    date: "On going",
+    points: [
+      "Building and maintaining web applications with React.js and related technologies.",
+      "Cooperating with clients to create software solutions and maintaining ecommerce sites and products through updates.",
+      "Enforcing responsive design and verifying cross-browser compatibility.",
+      "Pursuing ongoing education to acquire knowledge and skills to perform at the highest level of competence.",
+    ],
+  },
+  {
+    title: "Web Developer",
     company_name: "Made For Marketing",
     icon: mfm,
     iconBg: "#383E56",
     date: "March 2021 - January 2023",
     points: [
-      "Developing and maintaining web applications using React.js and other related technologies.",
-      "Collaborating with cross-functional teams including designers, product managers, and other developers to create high-quality products.",
-      "Implementing responsive design and ensuring cross-browser compatibility.",
-      "Participating in code reviews and providing constructive feedback to other developers.",
+      "Utilized React.js and associated technologies to build and maintain web applications.",
+      "Worked closely with cross-functional teams comprised product managers, designers, and developers to produce superior quality products.",
+      "Incorporated responsive design and verifyed cross-browser compatibility.",
+      "Joined code reviews and delivered constructive criticism to fellow developers.",
     ],
   },
   {
@@ -140,23 +150,10 @@ const experiences = [
     iconBg: "#E6DEDD",
     date: "Feb 2022 - Nov 2022",
     points: [
-      "Developing and maintaining web applications using React.js and Next.js.",
-      "Collaborating to produce NFTs from assets via generative art.",
-      "Developing and producing front end minting experienceS for the obtaining assets.",
-      "Participating in the community, answering questions publicly about processes and projections, providing transparency.",
-    ],
-  },
-  {
-    title: "Web Developer",
-    company_name: "freelance",
-    icon: shopify,
-    iconBg: "#383E56",
-    date: "On going",
-    points: [
-      "Developing and maintaining web applications using React.js and other related technologies.",
-      "Collaborating with clients to develop software solutions and updating and maintaining ecommerce sites and products.",
-      "Implementing responsive design and ensuring cross-browser compatibility.",
-      "Continuing to educate myself, acquiring knowledge and skills in order to produce to the best of my abilities.",
+      "Created and managed web applications with React.js and Next.js.",
+      "Collaborated to generate NFTs using assets through generative art.",
+      "Designed and produced front-end experiences for minting assets.",
+      "Engaged with the community by publicly addressing inquiries about procedures and projections, and ensuring transparency.",
     ],
   },
   {
@@ -166,10 +163,10 @@ const experiences = [
     iconBg: "#E6DEDD",
     date: "June 2022 - Jan 2023",
     points: [
-      "Developing and maintaining web applications using React.js and other related technologies.",
-      "Designing wire frames, user flows, user personas, and prototypes with Figma.",
-      "Empathize needs, define problems, ideate creativity, prototype solutions, test everything.",
-      "Participating in code reviews and providing constructive feedback to other developers.",
+      "React.js and related technologies were utilized to develop and maintain web applications.",
+      "Wireframes, user flows, user personas, and prototypes were designed with Figma.",
+      "Needs were empathized with, problems were defined, creativity was ideated, solutions were prototyped, and everything was tested.",
+      "Code reviews were participated in and constructive feedback was provided to other developers.",
     ],
   },
 ];
@@ -177,26 +174,26 @@ const experiences = [
 const testimonials = [
   {
     testimonial:
-      "I thought it was impossible to make a website as beautiful as our product, but Roger proved me wrong.",
+      "I couldn't be more impressed with the outstanding work provided by this individual. Their ability to craft compelling content and deliver it within tight deadlines is truly remarkable. Their professionalism and attention to detail are unparalleled, making them an invaluable asset to any project.",
     name: "Sara Lee",
     designation: "CFO",
     company: "Acme Co",
-    image: "https://randomuser.me/api/portraits/women/4.jpg",
+    image: "",
   },
   {
     testimonial:
-      "I've never met a web developer who truly cares about their clients' success like Roger does.",
-    name: "Chris Brown",
+      "I had the pleasure of collaborating with this individual on a project, and I was blown away by their creativity and innovation. They consistently delivered high-quality work that exceeded my expectations, and their exceptional communication skills made the entire process a breeze. I would highly recommend them to anyone in need of top-notch content creation.",
+    name: "Standly Inname",
     designation: "COO",
-    company: "DEF Corp",
+    company: "Generic Company",
     image: "https://randomuser.me/api/portraits/men/5.jpg",
   },
   {
     testimonial:
-      "After Roger optimized our website, our traffic increased by 50%. We can't thank them enough!",
-    name: "Lisa Wang",
+      "It was an absolute pleasure working with this individual. Their commitment to excellence and their unwavering dedication to their craft is truly inspiring. They were able to take my ideas and transform them into captivating content that effectively communicated my message. I would recommend them without hesitation to anyone seeking a talented and reliable content creator.",
+    name: "Thisisa Placeholderer",
     designation: "CTO",
-    company: "456 Enterprises",
+    company: "Placeholder Enterprises",
     image: "https://randomuser.me/api/portraits/women/6.jpg",
   },
 ];
@@ -224,9 +221,9 @@ const projects = [
     source_code_link: "https://github.com/TheArtintheRaw/dashboard_mern_study",
   },
   {
-    name: "Web3 Metaverse Site",
+    name: "Ecommerce website",
     description:
-      "Web3 metaverse application, utilizing xyz.",
+      "Ecommerce website with stripe integration. Functionality includes checkout, payment, shipping, and more. Connected to headless CMS from sanity.io",
     tags: [
       {
         name: "react",
@@ -241,20 +238,20 @@ const projects = [
         color: "pink-text-gradient",
       },
     ],
-    image: Placeholder,
-    source_code_link: "https://github.com/",
+    image: ecommerce,
+    source_code_link: "https://github.com/theartintheraw/ecom",
   },
   {
     name: "ChatGPT Clone",
     description:
-      "A study on ChatGPT and how to use OpenAI API to power an application - uses firebase and google oauth2 logins.",
+      "The study explores the utilization of ChatGPT and OpenAI API to empower an application, incorporating Firebase and Google OAuth2 logins to store various chats.",
     tags: [
       {
         name: "nextjs",
         color: "blue-text-gradient",
       },
       {
-        name: "supabase",
+        name: "firebase",
         color: "green-text-gradient",
       },
       {
@@ -267,4 +264,20 @@ const projects = [
   },
 ];
 
-export { services, technologies, experiences, testimonials, projects };
+const socials = [
+    {
+      url:"https://www.instagram.com/theartintheraw"
+    },
+    {
+      url:"https://twitter.com/TheArtintheRaw"
+    },
+    {
+      url:"https://www.linkedin.com/in/artintheraw"
+    },
+    {
+      url:"https://github.com/TheArtintheRaw"
+    },
+  ];
+
+
+export { services, technologies, experiences, testimonials, projects, socials };

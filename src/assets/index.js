@@ -31,6 +31,7 @@ import mfm from "./company/mfm.png";
 import glc from "./company/glc.png";
 import Placeholder from "./Placeholder.png";
 import logo from "./logo.png";
+import ecommerce from "./ecommerce.png";
 
 
 
@@ -67,4 +68,5 @@ export {
   realdb,
   chatgpt,
   Placeholder,
+  ecommerce,
 };
