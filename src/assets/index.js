@@ -22,11 +22,11 @@ import redux from "./tech/redux.webp";
 import tailwind from "./tech/tailwind.webp";
 import typescript from "./tech/typescript.png";
 import threejs from "./tech/threejs.webp";
-
+import thfc from "./thfc.png";
 import meta from "./company/meta.png";
 import shopify from "./company/shopify.png";
 import starbucks from "./company/starbucks.png";
-
+import chknsammy from './chknsammy.png'
 import mfm from "./company/mfm.png";
 import glc from "./company/glc.png";
 import Placeholder from "./Placeholder.png";
@@ -69,4 +69,6 @@ export {
   chatgpt,
   Placeholder,
   ecommerce,
+  thfc,
+  chknsammy,
 };

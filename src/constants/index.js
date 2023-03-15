@@ -25,6 +25,8 @@ import {
   threejs,
   realdb,
   chatgpt,
+  thfc,
+  chknsammy,
 } from "../assets";
 
 export const navLinks = [
@@ -218,7 +220,7 @@ const projects = [
       },
     ],
     image: realdb,
-    source_code_link: "https://github.com/TheArtintheRaw/dashboard_mern_study",
+    source_code_link: "https://meek-kitsune-0153ba.netlify.app/",
   },
   {
     name: "Ecommerce website",
@@ -239,7 +241,7 @@ const projects = [
       },
     ],
     image: ecommerce,
-    source_code_link: "https://github.com/theartintheraw/ecom",
+    source_code_link: "https://rgrtht-store.vercel.app/",
   },
   {
     name: "ChatGPT Clone",
@@ -260,7 +262,28 @@ const projects = [
       },
     ],
     image: chatgpt,
-    source_code_link: "https://github.com/TheArtintheRaw/gptclone/",
+    source_code_link: "https://gptclone.vercel.app/",
+  },
+  {
+  name: "Restaurant Landing Page",
+    description:
+      "Still under construction - landing page for a restaurant using custom-made 3D graphics to showcase the restaurant in a different light compaire to competition, to leave a lasting impression on potential customers. By utilizing 3D models and interactive features, creating an immersive experience that will entice them to order, and to visit in person.",
+    tags: [
+      {
+        name: "react",
+        color: "blue-text-gradient",
+      },
+      {
+        name: "vite",
+        color: "green-text-gradient",
+      },
+      {
+        name: "css",
+        color: "pink-text-gradient",
+      },
+    ],
+    image: chknsammy,
+    source_code_link: "",
   },
 ];
 
