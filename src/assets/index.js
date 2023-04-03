@@ -32,9 +32,8 @@ import glc from "./company/glc.png";
 import Placeholder from "./Placeholder.png";
 import logo from "./logo.png";
 import ecommerce from "./ecommerce.png";
-
-
-
+import jobapp from "./jobapp.png";
+import tshirt from "./tshirt.png";
 import realdb from "./realdb.webp";
 
 export {
@@ -71,4 +70,6 @@ export {
   ecommerce,
   thfc,
   chknsammy,
+  jobapp,
+  tshirt,
 };

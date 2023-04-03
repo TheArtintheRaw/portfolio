@@ -16,17 +16,16 @@ import {
   figma,
   docker,
   meta,
-  starbucks,
   shopify,
-  Placeholder,
   ecommerce,
   mfm,
   glc,
   threejs,
   realdb,
   chatgpt,
-  thfc,
   chknsammy,
+  jobapp,
+  tshirt
 } from "../assets";
 
 export const navLinks = [
@@ -46,11 +45,11 @@ export const navLinks = [
 
 const services = [
   {
-    title: "Web Developer",
+    title: "Software Engineer",
     icon: web,
   },
   {
-    title: "React Developer",
+    title: "Web Designer",
     icon: mobile,
   },
   {
@@ -160,7 +159,7 @@ const experiences = [
   },
   {
     title: "Meta Frontend Developer Professional Certification",
-    company_name: "Meta",
+    company_name: "Meta Course",
     icon: meta,
     iconBg: "#E6DEDD",
     date: "June 2022 - Jan 2023",
@@ -202,7 +201,7 @@ const testimonials = [
 
 const projects = [
   {
-    name: "MERN Dashboard",
+  name: "MERN Dashboard",
     description:
       "Web-based CRUD Dashboard Application for Real Estate using the MERN stack, featuring login and out, creation and deletion of properties, agents directory and more.",
     tags: [
@@ -221,6 +220,27 @@ const projects = [
     ],
     image: realdb,
     source_code_link: "https://meek-kitsune-0153ba.netlify.app/",
+  },
+  {
+  name: "React-Native Job Finder App",
+    description:
+      "A React-Native application that allows users to search for jobs based on their location, skills, expected salary, and more. The app uses RapidApi to retrieve data.",
+    tags: [
+      {
+        name: "react",
+        color: "blue-text-gradient",
+      },
+      {
+        name: "rapidapi",
+        color: "green-text-gradient",
+      },
+      {
+        name: "tailwind",
+        color: "pink-text-gradient",
+      },
+    ],
+    image: jobapp,
+    source_code_link: "",
   },
   {
     name: "Ecommerce website",
@@ -283,6 +303,27 @@ const projects = [
       },
     ],
     image: chknsammy,
+    source_code_link: "",
+  },
+  {
+  name: "T-shirt customizer",
+    description:
+      "T shirt customizer that allows users to customize the appearance of a 3D model, including the colour of the shirt the logo design and placement and even to upgrade their own, not only that it uses openAI API to allow users to create logos from prompts right in the app.",
+    tags: [
+      {
+        name: "react",
+        color: "blue-text-gradient",
+      },
+      {
+        name: "tailwindcss",
+        color: "green-text-gradient",
+      },
+      {
+        name: "dall-e",
+        color: "pink-text-gradient",
+      },
+    ],
+    image: tshirt,
     source_code_link: "",
   },
 ];

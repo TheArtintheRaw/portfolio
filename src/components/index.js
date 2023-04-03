@@ -1,6 +1,5 @@
 import {
   BallCanvas,
-  LaptopCanvas,
   WordearthCanvas,
 } from "./canvas";
 
@@ -29,7 +28,6 @@ export {
   Contact,
   CanvasLoader,
   BallCanvas,
-  LaptopCanvas,
   WordearthCanvas,
   Socials,
   ErrorBoundary,

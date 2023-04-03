@@ -96,7 +96,10 @@ function Laptop({ open, hinge, ...props }) {
         position={[0, -0.03, 1.2]}
       />
       <Html distanceFactor={10}>
-        <div className='content'>Click me</div>
+        <div className='content'>
+          Click Me <br />
+          Spin Me
+        </div>
       </Html>
     </group>
   );
@@ -110,7 +113,7 @@ export default function LaptopCanvas() {
   return (
     <web.main
       style={{
-        background: props.open.to([0, 1], ["#001b3f", "#bf2051"]),
+        background: props.open.to([0, 1], ["#f3f3f3", "#14ffcb"]),
         zIndex: props.open.to([0, 1], [0, 2]),
       }}
     >
@@ -118,13 +121,13 @@ export default function LaptopCanvas() {
         style={{
           opacity: props.open.to([0, 1], [1, 0]),
         }}
-        className={`${styles.heroHeadText} text-white z-1 text-center`}
+        className={`${styles.heroHeadText} text-primary z-1 text-center`}
       >
-        Hi, I'm <span className='text-[#bf2051]'>Roger</span>
+        Hi, I'm <span className='text-tertiary'>Roger</span>
       </web.h1>
 
       <web.h1
-        className={`${styles.heroHeadText} laptop-open text-[#f3f3f3]`}
+        className={`${styles.heroHeadText} laptop-open text-secondary dark-text-primary`}
         style={{
           zIndex: 2,
           opacity: props.open.to([0, 1], [0, 1]),
@@ -138,7 +141,7 @@ export default function LaptopCanvas() {
         <three.pointLight
           position={[10, 10, 10]}
           intensity={1.5}
-          color={props.open.to([0, 1], ["#bf2051", "#bf2051"])}
+          color={props.open.to([0, 1], ["#14FFCB", "#F3F3f3"])}
         />
         <Suspense fallback={<CanvasLoader />}>
           <group
