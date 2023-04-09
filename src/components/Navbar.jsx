@@ -25,6 +25,13 @@ const Navbar = () => {
       window.removeEventListener("scroll", handleScroll, { passive: true });
   }, []);
 
+  function darkMode() {
+    const root = document.getElementById("root");
+    root.classList.toggle("dark");
+    setToggle(!toggle);
+    setActive(toggle ? "dark" : "");
+  }
+
   return (
     <nav
       className={`${
@@ -43,19 +50,22 @@ const Navbar = () => {
           }}
         >
           <img src={logo1} alt="logo1" className="w-9 h-9 object-contain" />
-          <p className="text-primary dark-text-secondary text-[18px] font-bold cursor-pointer flex ">
+          <p className="text-primary dark:text-secondary text-[18px] font-bold cursor-pointer flex ">
             Portfolio |&nbsp;
             <span className="sm:block hidden"> | &nbsp;RGR THT</span>
           </p>
         </Link>
+        {/* <div onClick={(e) => darkMode(e, "dark-mode")}>
+          <button>L/D</button>
+        </div> */}
 
         <ul className="list-none hidden sm:flex flex-row gap-10">
           {navLinks.map((nav) => (
             <li
               key={nav.id}
               className={`${
-                active === nav.title ? "text-tertiary" : "text-primary"
-              } hover:text-white text-[18px] font-extrabold cursor-pointer overline`}
+                active === nav.title ? "text-secondary" : "text-primary"
+              } dark:text-secondary dark:hover:text-tertiary text-[18px] font-extrabold cursor-pointer overline`}
               onClick={() => setActive(nav.title)}
             >
               <a href={`#${nav.id}`}>{nav.title}</a>
@@ -81,7 +91,11 @@ const Navbar = () => {
                 <li
                   key={nav.id}
                   className={`font-poppins font-medium cursor-pointer text-[16px] text-secondary ${
-                    active === nav.title ? "text-primary" : "text-tertiary"
+                    active === nav.title
+                      ? "dark:text-secondary"
+                      : "text-tertiary"
+                  } dark:${
+                    active === nav.title ? "text-secondary" : "text-primary"
                   }`}
                   onClick={() => {
                     setToggle(!toggle);

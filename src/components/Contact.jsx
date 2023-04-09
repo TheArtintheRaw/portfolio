@@ -65,15 +65,13 @@ const Contact = () => {
   };
 
   return (
-    <div
-      className={`xl:mt-12 flex xl:flex-row flex-col-reverse overflow-hidden m-auto md:p-5 gap-5`}
-    >
+    <div className="xl:mt-4 h-[95%] w-auto flex xl:flex-row flex-col-reverse overflow-hidden">
       <motion.div
         variants={slideIn("left", "tween", 0.2, 1)}
-        className="blue-glass flex-[0.75] bg-transparent p-8 rounded-2xl gap-10"
+        className="glass-card flex-[1/2] bg-transparent p-4 m-4 rounded-2xl gap-10"
       >
         <p className={styles.sectionSubText}>Get in touch</p>
-        <h3 className={styles.sectionHeadText}>CONTACT</h3>
+        <h3 className={styles.sectionHeadText}>Contact</h3>
 
         <form
           ref={formRef}
@@ -81,42 +79,48 @@ const Contact = () => {
           className="mt-12 flex flex-col gap-8"
         >
           <label className="flex flex-col">
-            <span className="text-primary font-bold mb-4">Your Name</span>
+            <span className="text-black dark:text-white font-medium mb-4">
+              Your Name
+            </span>
             <input
               type="text"
               name="name"
               value={form.name}
               onChange={handleChange}
               placeholder="What's your name?"
-              className="glass-card bg-tertiary py-4 px-6 placeholder:text-primary text-primary rounded-lg outline-none border-none font-medium"
+              className="glass-card bg-tertiary py-4 px-6 placeholder:text-secondary dark:text-white text-black rounded-lg outline-none border-none font-medium"
             />
           </label>
           <label className="flex flex-col">
-            <span className="text-primary font-bold mb-4">Your email</span>
+            <span className="dark:text-white text-black font-medium mb-4">
+              Your email
+            </span>
             <input
               type="email"
               name="email"
               value={form.email}
               onChange={handleChange}
               placeholder="What's your email?"
-              className="glass-card bg-tertiary py-4 px-6 placeholder:text-primary text-primary rounded-lg outline-none border-none font-medium"
+              className="glass-card bg-tertiary py-4 px-6 placeholder:text-secondary dark:text-white text-black rounded-lg outline-none border-none font-medium"
             />
           </label>
           <label className="flex flex-col">
-            <span className="text-primary font-bold mb-4">Your Message</span>
+            <span className="dark:text-white text-black font-medium mb-4">
+              Your Message
+            </span>
             <textarea
               rows={7}
               name="message"
               value={form.message}
               onChange={handleChange}
               placeholder="What would you like to discuss?"
-              className="glass-card bg-tertiary py-4 px-6 placeholder:text-primary text-primary rounded-lg outline-none border-none font-medium"
+              className="glass-card bg-tertiary py-4 px-6 placeholder:text-secondary dark:text-white text-black rounded-lg outline-none border-none font-medium"
             />
           </label>
 
           <button
             type="submit"
-            className="glass-card bg-tertiary py-3 px-8 rounded-xl outline-none w-fit text-primary font-bold shadow-md shadow-primary"
+            className="glass-card bg-tertiary py-3 px-8 rounded-xl outline-none w-fit dark:text-white text-black font-bold shadow-md shadow-primary"
           >
             {loading ? "Sending..." : "Send"}
           </button>

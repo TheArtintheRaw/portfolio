@@ -240,7 +240,7 @@ const projects = [
       },
     ],
     image: jobapp,
-    source_code_link: "",
+    source_code_link: "https://github.com/theartintheraw/ ",
   },
   {
     name: "Ecommerce website",
@@ -303,7 +303,7 @@ const projects = [
       },
     ],
     image: chknsammy,
-    source_code_link: "",
+    source_code_link: "https://lander-xi.vercel.app/",
   },
   {
   name: "T-shirt customizer",

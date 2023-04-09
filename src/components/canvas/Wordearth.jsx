@@ -70,16 +70,11 @@ function Cloud({ count = 4, radius = 20 }) {
 
 export default function WordearthCanvas() {
   return (
-    <Canvas dpr={[1, 2]} camera={{ position: [0, 0, 35], fov: 90 }}>
+    <Canvas dpr={[1, 2]} camera={{ position: [0, 0, 45], fov: 90 }}>
       <Suspense fallback={<CanvasLoader />}>
-        <fog attach='fog' args={["#202025", 0, 80]} />
+        <fog attach="fog" args={["#202025", 0, 50]} />
         <Cloud count={8} radius={20} />
-        <OrbitControls
-          autoRotate
-          enableZoom={false}
-          maxPolarAngle={Math.PI / 2}
-          minPolarAngle={Math.PI / 2}
-        />
+        <OrbitControls autoRotate enableZoom={false} />
       </Suspense>
     </Canvas>
   );

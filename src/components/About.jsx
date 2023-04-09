@@ -16,7 +16,7 @@ const ServiceCard = ({ i, title, icon }) => (
   >
     <motion.div
       variants={fadeIn("right", "spring", i * 0.5, 0.75)}
-      className="w-full glass-card p-[1px] rounded-[20px] shadow-card"
+      className="w-full justify-between glass-card p-[1px] rounded-[20px] shadow-card"
     >
       <div
         options={{
@@ -32,7 +32,7 @@ const ServiceCard = ({ i, title, icon }) => (
           className="w-16 h-16 object-contain"
         />
 
-        <h3 className="text-primary dark-text-secondary text-[20px] font-bold text-center">
+        <h3 className="text-primary dark:text-secondary text-[20px] font-bold text-center">
           {title}
         </h3>
       </div>
@@ -50,12 +50,12 @@ const About = () => {
           className="w-[150px] h-auto rounded-lg"
         />
         <p
-          className={`${styles.sectionSubText} dark-[${styles.darkSectionSubText}]`}
+          className={`${styles.sectionSubText} dark:${styles.darkSectionSubText}`}
         >
           Introduction
         </p>
         <h2
-          className={`${styles.sectionHeadText} dark-[${styles.darkSectionHeadText}]`}
+          className={`${styles.sectionHeadText} dark:${styles.darkSectionHeadText}`}
         >
           About Me
         </h2>
@@ -63,7 +63,7 @@ const About = () => {
 
       <motion.p
         variants={fadeIn("", "", 0.1, 1)}
-        className="mt-4 text-primary dark-text-secondary text-[17px] max-w-3xl leading-[30px]"
+        className="mt-4 text-primary dark:text-secondary text-[17px] max-w-3xl leading-[30px]"
       >
         I'm Roger, a Web Developer with experience producing graphic designs.
         Educated in TypeScript and JavaScript and have expertise in frameworks
