@@ -16,7 +16,7 @@ const ExperienceCard = ({ experience }) => {
   return (
     <VerticalTimelineElement
       contentStyle={{
-        background: "#1a1a1a",
+        background: "#FAF9F6",
         border: "1px solid #f3f3f3",
         color: "#111111",
         borderRadius: "5px",
