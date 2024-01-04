@@ -70,4 +70,5 @@ export {
   chknsammy,
   jobapp,
   tshirt,
+  ibm,
 };
