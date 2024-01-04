@@ -70,7 +70,7 @@ const About = () => {
         React-Three-Fiber, and programs like Blender to produce 3D models.
         Able to collaborate with teammates to produce results efficiently and effectively and with clients to design their visions
         with accessible, optimized, and scalable industry-standard solutions.
-        Give me a shout, let's create something awesome!.
+        Give me a shout, let's create something awesome!
       </motion.p>
 
       <div className="mt-20 flex flex-wrap gap-10 py-24">
