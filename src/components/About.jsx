@@ -66,12 +66,11 @@ const About = () => {
         className="mt-4 text-primary dark:text-secondary text-[17px] max-w-3xl leading-[30px]"
       >
         I'm Roger, a Web Developer with experience producing graphic designs.
-        Educated in TypeScript and JavaScript and have expertise in frameworks
-        like React, Node.js, and Next.js. Experienced with Three.js,
-        React-Three-Fiber, and programs like Blender to produce digital assets.
-        Able to effectively collaborate with clients to design their visions
+        Educated in TypeScript and JavaScript and have expertise in React, Node.js, and Next.js. Experienced with Three.js,
+        React-Three-Fiber, and programs like Blender to produce 3D models.
+        Able to collaborate with teammates to produce results efficiently and effectively and with clients to design their visions
         with accessible, optimized, and scalable industry-standard solutions.
-        Creating the future one page at a time.
+        Give me a shout, let's create something awesome!.
       </motion.p>
 
       <div className="mt-20 flex flex-wrap gap-10 py-24">
