@@ -306,12 +306,12 @@ const projects = [
     source_code_link: "https://lander-xi.vercel.app/",
   },
   {
-  name: "T-shirt customizer",
+  name: "Dope Sh!rt",
     description:
-      "T shirt customizer that allows users to customize the appearance of a 3D model, including the colour of the shirt the logo design and placement and even to upgrade their own, not only that it uses openAI API to allow users to create logos from prompts right in the app.",
+      "Dope Sh!rt, a 3d Tshirt mock up that allows users to customize the colour of the shirt, the logo design and placement, and even to upload their own design, it also allows for ai prompt to create logos right in the app.",
     tags: [
       {
-        name: "react",
+        name: "openAI",
         color: "blue-text-gradient",
       },
       {
@@ -319,12 +319,12 @@ const projects = [
         color: "green-text-gradient",
       },
       {
-        name: "dall-e",
+        name: "react three fiber",
         color: "pink-text-gradient",
       },
     ],
     image: tshirt,
-    source_code_link: "",
+    source_code_link: "https://3dcustom.vercel.app",
   },
 ];
 
@@ -341,6 +341,9 @@ const socials = [
     {
       url:"https://github.com/TheArtintheRaw"
     },
+    {
+      url:"https://apportal.io"
+    }
   ];
 
 
