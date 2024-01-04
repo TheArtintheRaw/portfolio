@@ -18,6 +18,7 @@ import {
   meta,
   shopify,
   ecommerce,
+  Placeholder,
   mfm,
   glc,
   threejs,
@@ -306,9 +307,9 @@ const projects = [
     source_code_link: "https://gptclone.vercel.app/",
   },
   {
-  name: "Restaurant Landing Page",
+  name: "Renobo Digital Renovator and Spatial App",
     description:
-      "Still under construction - landing page for a restaurant using custom-made 3D graphics to showcase the restaurant in a different light compaire to competition, to leave a lasting impression on potential customers. By utilizing 3D models and interactive features, creating an immersive experience that will entice them to order, and to visit in person.",
+      "Renobo digital renovator. Customize a space, with multiple users, you can have your friends join your room and help you rearrange it.",
     tags: [
       {
         name: "react",
@@ -319,12 +320,12 @@ const projects = [
         color: "green-text-gradient",
       },
       {
-        name: "css",
+        name: "socket.io",
         color: "pink-text-gradient",
       },
     ],
-    image: chknsammy,
-    source_code_link: "https://lander-xi.vercel.app/",
+    image: Placeholder,
+    source_code_link: "https://renobo.pro",
   },
   {
   name: "Dope Sh!rt",
