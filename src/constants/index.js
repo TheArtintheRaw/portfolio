@@ -45,7 +45,7 @@ export const navLinks = [
 
 const services = [
   {
-    title: "Software Engineer",
+    title: "Web Developer",
     icon: web,
   },
   {
@@ -53,7 +53,7 @@ const services = [
     icon: mobile,
   },
   {
-    title: "Web3 Developer",
+    title: "Software Engineer",
     icon: backend,
   },
   {
@@ -80,11 +80,11 @@ const technologies = [
     icon: typescript,
   },
   {
-    name: "React JS",
+    name: "React",
     icon: reactjs,
   },
   {
-    name: "Redux Toolkit",
+    name: "Redux",
     icon: redux,
   },
   {
@@ -92,7 +92,7 @@ const technologies = [
     icon: tailwind,
   },
   {
-    name: "Node JS",
+    name: "NodeJS",
     icon: nodejs,
   },
   {
@@ -121,7 +121,7 @@ const experiences = [
   {
     title: "Web Developer",
     company_name: "freelance",
-    icon: shopify,
+    icon: reactjs,
     iconBg: "#383E56",
     date: "On going",
     points: [
@@ -159,7 +159,7 @@ const experiences = [
   },
   {
     title: "Meta Frontend Developer Professional Certification",
-    company_name: "Meta Course",
+    company_name: "Meta on Coursera",
     icon: meta,
     iconBg: "#E6DEDD",
     date: "June 2022 - Jan 2023",
@@ -168,6 +168,18 @@ const experiences = [
       "Wireframes, user flows, user personas, and prototypes were designed with Figma.",
       "Needs were empathized with, problems were defined, creativity was ideated, solutions were prototyped, and everything was tested.",
       "Code reviews were participated in and constructive feedback was provided to other developers.",
+    ],
+  },
+  {
+    title: "IBM Full Stack Software Developer Professional Certification",
+    company_name: "IBM on Coursera",
+    icon: ibm,
+    iconBg: "#E6DEDD",
+    data: "April 2023 - August 2023",
+    points: [
+      "The earner of this Professional Certificate has completed 10 courses on various Application Development and Cloud technologies and is now equipped with the skills and know how to undertake challenges of Developing Cloud Native Applications."
+      "The Certificate earner has hands-on working knowledge with HTML, CSS, JavaScript, GitHub, Node.js, React, Cloud Native practices, DevOps, CI/CD, Containers, Docker, Kubernetes, OpenShift, Python programming, Databases, SQL, NoSQL, Django ORM, Bootstrap, Application Security, Microservices, Serverless computing, and more."
+      "The learner has also deployed several applications on cloud, completed a capstone project, and delivered a Software as a Service (SaaS) solution using Cloud Native methodologies."
     ],
   },
 ];
