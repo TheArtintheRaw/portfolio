@@ -8,7 +8,7 @@ import github from "./github.png";
 import menu from "./menu.svg";
 import close from "./close.svg";
 import chatgpt from "./chatgpt.webp";
-
+import ibm from "./company/ibm.png";
 import css from "./tech/css.webp";
 import docker from "./tech/docker.webp";
 import figma from "./tech/figma.webp";
