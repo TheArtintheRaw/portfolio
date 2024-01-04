@@ -48,18 +48,22 @@ const services = [
   {
     title: "Web Developer",
     icon: web,
+    source_code_link: "/projects"
   },
   {
     title: "Web Designer",
     icon: mobile,
+    source_code_link: "/projects"
   },
   {
     title: "Software Engineer",
     icon: backend,
+    source_code_link: "/projects"
   },
   {
     title: "Graphic Designer",
     icon: creator,
+    source_code_link: "/projects"
   },
 ];
 
