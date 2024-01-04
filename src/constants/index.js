@@ -173,10 +173,10 @@ const experiences = [
     iconBg: "#E6DEDD",
     date: "June 2022 - Jan 2023",
     points: [
-      "React.js and related technologies were utilized to develop and maintain web applications.",
-      "Wireframes, user flows, user personas, and prototypes were designed with Figma.",
-      "Needs were empathized with, problems were defined, creativity was ideated, solutions were prototyped, and everything was tested.",
-      "Code reviews were participated in and constructive feedback was provided to other developers.",
+     "Created responsive websites using HTML to structure content, CSS to handle visual style, and JavaScript to develop interactive experiences.",
+     "Used React in relation to Javascript libraries and frameworks.",
+     "Utilized Bootstrap, and chakra CSS Frameworks to create webpages and worked with GitHub repositories and version control.",
+     "Learned best approaches to problem-solving, as well as advanced React fundimentals.",
     ],
   },
   {
