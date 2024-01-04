@@ -25,7 +25,8 @@ import {
   chatgpt,
   chknsammy,
   jobapp,
-  tshirt
+  tshirt,
+  ibm
 } from "../assets";
 
 export const navLinks = [
@@ -114,6 +115,10 @@ const technologies = [
   {
     name: "docker",
     icon: docker,
+  },
+  {
+    name: "ibm",
+    icon: ibm,
   },
 ];
 
