@@ -182,9 +182,9 @@ const experiences = [
     iconBg: "#E6DEDD",
     date: "April 2023 - August 2023",
     points: [
-      "The earner of this Professional Certificate has completed 10 courses on various Application Development and Cloud technologies and is now equipped with the skills and know how to undertake challenges of Developing Cloud Native Applications."
-      "The Certificate earner has hands-on working knowledge with HTML, CSS, JavaScript, GitHub, Node.js, React, Cloud Native practices, DevOps, CI/CD, Containers, Docker, Kubernetes, OpenShift, Python programming, Databases, SQL, NoSQL, Django ORM, Bootstrap, Application Security, Microservices, Serverless computing, and more."
-      "The learner has also deployed several applications on cloud, completed a capstone project, and delivered a Software as a Service (SaaS) solution using Cloud Native methodologies."
+      "The earner of this Professional Certificate has completed 10 courses on various Application Development and Cloud technologies and is now equipped with the skills and know how to undertake challenges of Developing Cloud Native Applications.",
+      "The Certificate earner has hands-on working knowledge with HTML, CSS, JavaScript, GitHub, Node.js, React, Cloud Native practices, DevOps, CI/CD, Containers, Docker, Kubernetes, OpenShift, Python programming, Databases, SQL, NoSQL, Django ORM, Bootstrap, Application Security, Microservices, Serverless computing, and more.",
+      "The learner has also deployed several applications on cloud, completed a capstone project, and delivered a Software as a Service (SaaS) solution using Cloud Native methodologies.",
     ],
   },
 ];
